@@ -1,6 +1,6 @@
 package tunnel
 
-import "github.com/argotunnel/core/pqc"
+import "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/pqc"
 
 type Tunnel interface {
     Start() error
