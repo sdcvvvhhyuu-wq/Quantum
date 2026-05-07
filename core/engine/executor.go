@@ -4,20 +4,20 @@ import (
     "log"
     "time"
 
-    "github.com/argotunnel/core/capabilities"
-    "github.com/argotunnel/core/tunnel"
-    "github.com/argotunnel/core/obfs"
-    "github.com/argotunnel/core/pqc"
-    "github.com/argotunnel/core/ai_morph"
-    "github.com/argotunnel/core/active_shield"
-    "github.com/argotunnel/core/dynamic_orchestra"
-    "github.com/argotunnel/core/dns_tunnel"
-    "github.com/argotunnel/core/icmp_tunnel"
-    "github.com/argotunnel/core/dpi_analyzer"
-    "github.com/argotunnel/core/qrng"
-    "github.com/argotunnel/core/rl_agent"
-    "github.com/argotunnel/core/gan_generator"
-    "github.com/argotunnel/core/quic_masq"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/capabilities"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/tunnel"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/obfs"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/pqc"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/ai_morph"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/active_shield"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/dynamic_orchestra"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/dns_tunnel"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/icmp_tunnel"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/dpi_analyzer"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/qrng"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/rl_agent"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/gan_generator"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/quic_masq"
 )
 
 type Executor struct {
@@ -29,7 +29,7 @@ func NewExecutor(c capabilities.CapabilitySet) *Executor {
 }
 
 func (e *Executor) Start() error {
-    log.Printf("Starting ArgoTunnel with %d active capabilities", len(e.caps.ActiveIDs))
+    log.Printf("Starting sdcvvvhhyuu-wq/argotunnel/tree/main with %d active capabilities", len(e.caps.ActiveIDs))
 
     var primary, secondary tunnel.Tunnel
     switch e.caps.Transport {
