@@ -6,7 +6,7 @@ import (
 
     "golang.zx2c4.com/wireguard/device"
     "golang.zx2c4.com/wireguard/tun/netstack"
-    "github.com/argotunnel/core/pqc"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/pqc"
 )
 
 type WireGuardTunnel struct {
