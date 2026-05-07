@@ -1,7 +1,7 @@
-module github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/linux
+module github.com/sdcvvvhhyuu-wq/argotunnel/linux
 
 go 1.23
 
-require github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core v0.0.0
+require github.com/sdcvvvhhyuu-wq/argotunnel/core v0.0.0
 
-replace github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core => ../core
+replace github.com/sdcvvvhhyuu-wq/argotunnel/core => ../core
