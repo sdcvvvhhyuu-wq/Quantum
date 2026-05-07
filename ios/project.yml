@@ -1,6 +1,9 @@
 name: ArgoTunnel
 options:
   bundleIdPrefix: com.argotunnel
+settings:
+  base:
+    TARGETED_DEVICE_FAMILY: "1,2"
 targets:
   ArgoTunnel:
     type: application
@@ -10,8 +13,9 @@ targets:
     info:
       path: ArgoTunnel/Info.plist
     settings:
-      INFOPLIST_FILE: ArgoTunnel/Info.plist
-      PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app
+      base:
+        INFOPLIST_FILE: ArgoTunnel/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app
     dependencies:
       - target: PacketTunnel
   PacketTunnel:
@@ -22,6 +26,7 @@ targets:
     info:
       path: PacketTunnelProvider/Info.plist
     settings:
-      INFOPLIST_FILE: PacketTunnelProvider/Info.plist
-      PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app.extension
-      CODE_SIGN_ENTITLEMENTS: PacketTunnelProvider/Entitlements.plist
+      base:
+        INFOPLIST_FILE: PacketTunnelProvider/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app.extension
+        CODE_SIGN_ENTITLEMENTS: PacketTunnelProvider/Entitlements.plist
