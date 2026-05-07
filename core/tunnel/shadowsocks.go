@@ -3,7 +3,7 @@ package tunnel
 import (
     "log"
     "github.com/txthinking/socks5"
-    "github.com/argotunnel/core/pqc"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/pqc"
 )
 
 type ShadowsocksTunnel struct {
