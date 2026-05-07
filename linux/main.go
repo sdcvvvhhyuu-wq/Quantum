@@ -5,8 +5,8 @@ import (
     "os"
     "os/signal"
     "syscall"
-    "github.com/argotunnel/core/engine"
-    "github.com/argotunnel/core/capabilities"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/engine"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/capabilities"
 )
 
 func main() {
