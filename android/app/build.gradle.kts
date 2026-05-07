@@ -10,7 +10,9 @@ android {
         targetSdk = 34
     }
     buildFeatures { compose = true }
-    composeOptions { kotlinCompilerExtensionVersion = "1.5.4" }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.3"  // ← اصلاح شد: 1.5.4 → 1.5.3
+    }
 }
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
