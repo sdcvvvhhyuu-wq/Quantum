@@ -5,8 +5,7 @@ import (
     "log"
     "time"
 
-    // مسیر تصحیح‌شده (KEM به‌جای PKE)
-    "github.com/cloudflare/circl/blob/main/kem/kyber/kyber1024/kyber.go"
+    "github.com/cloudflare/circl/kem/kyber/kyber1024"
 )
 
 type QuantumSession struct {
@@ -16,7 +15,6 @@ type QuantumSession struct {
 }
 
 func NewQuantumSession(level int) (*QuantumSession, error) {
-    // GenerateKeyPair متعلق به پکیج kem/kyber/kyber1024 است
     pub, priv, err := kyber1024.GenerateKeyPair(rand.Reader)
     if err != nil {
         return nil, err
@@ -51,15 +49,15 @@ func (s *QuantumSession) RegisterTunnel(t interface{ SetQuantumSession(*QuantumS
 }
 
 func (s *QuantumSession) HybridEncapsulate(classicPub []byte) (ct, ss []byte, err error) {
-    pk, err := kyber1024.UnmarshalBinaryPublicKey(s.PublicKey)
+    scheme := kyber1024.Scheme()
+    pk, err := scheme.UnmarshalBinaryPublicKey(s.PublicKey)
     if err != nil {
         return nil, nil, err
     }
-    ct, ss, err = kyber1024.Encapsulate(pk)
+    ct, ss, err = scheme.Encapsulate(pk)
     if err != nil {
         return nil, nil, err
     }
-    // ترکیب هیبرید با کلید کلاسیک
     hybrid := append(ss, classicPub...)
     return ct, hybrid, nil
 }
