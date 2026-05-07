@@ -3,7 +3,7 @@ package dns_tunnel
 import (
     "log"
     "github.com/miekg/dns"
-    "github.com/argotunnel/core/pqc"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/pqc"
 )
 
 type DNSTunnel struct {
