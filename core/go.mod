@@ -1,4 +1,4 @@
-module github.com/argotunnel/core
+module github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core
 
 go 1.23
 
