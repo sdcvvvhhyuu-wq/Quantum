@@ -2,7 +2,7 @@ package quic_masq
 
 import (
     "log"
-    "github.com/argotunnel/core/tunnel"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/tunnel"
 )
 
 func EnableQUICWrapper(t tunnel.Tunnel) {
