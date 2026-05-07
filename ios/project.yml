@@ -1,0 +1,27 @@
+name: ArgoTunnel
+options:
+  bundleIdPrefix: com.argotunnel
+targets:
+  ArgoTunnel:
+    type: application
+    platform: iOS
+    sources:
+      - path: ArgoTunnel
+    info:
+      path: ArgoTunnel/Info.plist
+    settings:
+      INFOPLIST_FILE: ArgoTunnel/Info.plist
+      PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app
+    dependencies:
+      - target: PacketTunnel
+  PacketTunnel:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: PacketTunnelProvider
+    info:
+      path: PacketTunnelProvider/Info.plist
+    settings:
+      INFOPLIST_FILE: PacketTunnelProvider/Info.plist
+      PRODUCT_BUNDLE_IDENTIFIER: com.argotunnel.app.extension
+      CODE_SIGN_ENTITLEMENTS: PacketTunnelProvider/Entitlements.plist
