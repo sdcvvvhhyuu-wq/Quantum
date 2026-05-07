@@ -4,7 +4,7 @@ import (
     "log"
     "math/rand"
     "time"
-    "github.com/argotunnel/core/tunnel"
+    "github.com/sdcvvvhhyuu-wq/argotunnel/tree/main/core/tunnel"
 )
 
 type Orchestrator struct {
